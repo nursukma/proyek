@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\History;
-use App\Detail;
-use App\Sell;
-use App\Product;
+use App\Models\History;
+use App\Models\Detail;
+use App\Models\Sell;
+use App\Models\Product;
 use PDF;
 use Auth;
 use DataTables;

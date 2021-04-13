@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Product;
-use App\Detail;
-use App\History;
+use App\Models\Product;
+use App\Models\Detail;
+use App\Models\History;
 use Auth;
 use Session;
 

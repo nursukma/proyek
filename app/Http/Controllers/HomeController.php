@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Auth;
-use App\User;
-use App\Detail;
+use App\Models\User;
+use App\Models\Detail;
 use DataTables;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -21,12 +21,27 @@ class HomeController extends Controller
     // {
     //     $this->middleware('auth');
     // }
-    public function index()
+    public function index(Request $request)
     {
         $check = Auth::check();
         $user = Auth::user()['role'];
-        $product = Product::orderBy('sold')->where('stock','>',0)->paginate(6);
-        return view('index',compact('product','check','user'));
+        // $product = Product::orderBy('sold')->where('stock','>',0)->paginate(6);
+        // return view('index',compact('product','check','user'));
+
+        $product = Product::where([
+            ['name','!=',Null],
+            [function ($query) use ($request){
+                if(($cari = $request -> cari)){
+                    $query->orWhere('name','Like','%'.$cari.'%')->get();
+                }
+            }],
+            ['stock','>',0] 
+        ]) 
+            -> orderBy("user_id","asc")
+            ->paginate(6);
+        
+        return view('index',compact('product','check','user'))
+        -> with('i',(request()->input('page', 1) - 1) * 6);
     }
 
     /**

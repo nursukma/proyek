@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\Models\Product;
 use DataTables;
 use Auth;
 use Validator;
@@ -21,7 +21,7 @@ class ProductController extends Controller
     {
         $this->middleware('auth');
     }
-    public function index()
+    public function index(Request $request)
     {
         $user = Auth::user()['role'];
         $check = Auth::check();

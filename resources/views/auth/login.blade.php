@@ -165,7 +165,7 @@
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
             <div class="row mb-4">
               <div class="col-md-7">
-                <h1>Fly With Coffee</h1>
+                <h1>Menikmati Sajian Berkelas</h1>
                 <p class="mb-5 lead">Don't Have Any Account ? Register Now</p>
                 <div>
                     <a data-toggle="modal" data-target="#login" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">Login</a>

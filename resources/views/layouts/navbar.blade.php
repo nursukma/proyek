@@ -1,8 +1,15 @@
 <section class="head-text">
-  <div class="container-group">
-    <h1 class="mb-0 site-logo"><img src="/images/web quiz.png" height='80px'/> <a href="{{route('index')}}" class="text-black mb-0">Hamur Ipok</a></h1>
+  <div class="form-group">
+    <h1 class="mb-0 site-logo"><img src="/images/logo.jpg" height='50px'/> <a href="{{route('index')}}" class="text-black mb-0">Restoran MLG</a></h1>
+    <form method="get" action="{{ route('index') }}" id="myForm" role="search">
+    {{-- <div class="form-group">                    --}}
+        <input type="text" name="cari" class="form-control" id="cari" aria-describedby="cari" placeholder="Cari">
+        <button type="submit" class="btn btn-primary">Submit</button>             
+    {{-- </div> --}}
   </div>
 </section>
+
+</form>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
   <ul class='cart'>
     <li class='carts'>

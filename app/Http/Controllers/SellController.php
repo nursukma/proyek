@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Sell;
+use App\Models\Sell;
 use Illuminate\Http\Request;
 
 class SellController extends Controller

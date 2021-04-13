@@ -15,7 +15,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="product-item">
               <figure>
-                <img src="/images/<?php echo $products->photo ?>" height='250px'/>
+                <img src="/images/<?php echo $products->photo ?>" height='150px'/>
               </figure>
               <div class="px-4">
                 <h3><a class='modal-show' href="{{route('home.show',$products->id)}}" title='Detail {{$products->name}}'>{{$products->name}}</a></h3>
@@ -30,11 +30,12 @@
           @endforeach
           </table>
         </div>
-        <div class='col-md-12'>
-        {{$product->links()}}
-        </div>
+        {{-- <div class='col-md-12'>
+        
+        </div> --}}
       </div>
     </div>
+    {{$product->links()}}
 @endsection
   </body>
 </html>

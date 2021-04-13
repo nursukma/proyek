@@ -1,7 +1,7 @@
 <table class="table table-hover">
     <tr>    
         <th>Name</th>
-        <th>Category</th>
+        {{-- <th>Category</th> --}}
         <th>Price</th>
         <th>Stock</th>
         <th>Sold</th>
@@ -11,7 +11,7 @@
     </tr>
     <tr>
         <td>{{$model->name}}</td>
-        <td>{{$model->category}}</td>
+        {{-- <td>{{$model->category}}</td> --}}
         <td>{{$model->price}}</td>
         <td>{{$model->stock}}</td>
         <td>{{$model->sold}}</td>
